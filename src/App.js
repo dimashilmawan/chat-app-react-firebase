@@ -1,12 +1,18 @@
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "./firebase";
 import Navbar from "./components/Navbar";
+import Chat from "./components/Chat";
 function App() {
+	const [user, loading] = useAuthState(auth);
 	return (
-		<div className="">
-			<header>
-				<Navbar />
-			</header>
-			<main></main>
-		</div>
+		!loading && (
+			<div className="h-screen bg-slate-100">
+				<header className="shadow-sm">
+					<Navbar />
+				</header>
+				<main>{user && <Chat />}</main>
+			</div>
+		)
 	);
 }
 
