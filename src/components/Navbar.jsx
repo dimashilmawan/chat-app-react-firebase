@@ -6,9 +6,9 @@ import SignOut from "./SignOut";
 
 const Navbar = () => {
 	return (
-		<nav className="flex h-[72px] items-center justify-between px-4 ">
+		<nav className="flex h-[60px] items-center justify-between px-4 ">
 			<div>
-				<BsFillChatSquareTextFill className="text-3xl text-green-600" />
+				<BsFillChatSquareTextFill className="text-3xl text-teal-700" />
 			</div>
 			{auth.currentUser ? <SignOut /> : <SignIn />}
 		</nav>

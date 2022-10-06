@@ -11,7 +11,7 @@ function App() {
 				<header className="shadow-sm">
 					<Navbar />
 				</header>
-				<main className="flex flex-1 flex-col overflow-scroll bg-red-600">
+				<main className="flex flex-1 flex-col overflow-scroll ">
 					{user && <Chat />}
 				</main>
 			</div>

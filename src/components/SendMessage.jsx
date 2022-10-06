@@ -33,7 +33,7 @@ const SendMessage = () => {
 				placeholder="type text"
 			/>
 			<button
-				className="bg-teal-600 p-2 focus:border-none focus:outline-none"
+				className="bg-teal-700 p-2 text-gray-100 focus:border-none focus:outline-none"
 				type="submit"
 			>
 				Enter
