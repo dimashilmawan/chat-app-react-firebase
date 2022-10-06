@@ -7,7 +7,7 @@ const SignIn = () => {
 	return (
 		<button
 			onClick={() => signInWithGoogle()}
-			className="flex items-center space-x-1 rounded-md bg-white p-[1px] px-3 py-2 text-gray-500/80 shadow-md"
+			className="flex items-center space-x-1 rounded-md bg-white p-[1px] px-4 py-3 text-gray-500/80 shadow-md"
 		>
 			<div className="">
 				<img src="/google-icon.png" alt="" className="h-6 w-6  " />

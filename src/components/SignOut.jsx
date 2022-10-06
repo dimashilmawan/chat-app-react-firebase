@@ -7,12 +7,12 @@ const SignOut = () => {
 		signOut(auth);
 	};
 	return (
-		<button
+		<p
 			onClick={signOutHandler}
-			className="flex items-center justify-center rounded-md  bg-red-500 px-4 py-2 font-semibold text-gray-100 "
+			className="flex items-center justify-center rounded-md   text-base font-semibold text-blue-500 underline underline-offset-[3px] "
 		>
-			Logout
-		</button>
+			{auth.currentUser.displayName.split(" ")[0]}
+		</p>
 	);
 };
 
