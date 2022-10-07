@@ -28,9 +28,9 @@ const ChatMessage = ({ message: { displayName, photoURL, text, uid } }) => {
 					}`}
 				>{`${isLogin ? "You" : displayName.split(" ")[0]}`}</h4>
 				<p
-					className={`break-all p-1  px-3 pb-[6px] text-base leading-tight ${
+					className={`break-all p-1  px-3  pb-[6px] text-base leading-tight transition-all ${
 						isLogin
-							? "rounded-lg rounded-tr-none bg-blue-500/95 text-gray-50"
+							? "rounded-lg rounded-tr-none bg-blue-500 text-gray-50 dark:bg-blue-600 dark:text-gray-100"
 							: "rounded-lg rounded-tl-none bg-gray-100 text-gray-800 dark:bg-gray-500 dark:text-gray-200 "
 					}`}
 				>

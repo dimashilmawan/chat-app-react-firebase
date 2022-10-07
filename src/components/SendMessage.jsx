@@ -28,7 +28,7 @@ const SendMessage = () => {
 	return (
 		<form className="flex space-x-2  p-4" onSubmit={submitHandler}>
 			<input
-				className="flex-1 rounded-lg bg-gray-50 p-3 pl-3 text-lg font-medium text-gray-700 focus:outline-none dark:bg-gray-600 dark:text-gray-200 dark:placeholder:text-gray-300"
+				className=" flex-1 rounded-lg bg-gray-50 p-3 pl-3 text-lg font-medium text-gray-700 transition-all focus:outline-none dark:bg-gray-600 dark:text-gray-200 dark:placeholder:text-gray-300"
 				ref={inputTextRef}
 				type="text"
 				placeholder="Type here..."

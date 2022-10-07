@@ -12,14 +12,14 @@ const SignOut = () => {
 		<div className="relative">
 			<button
 				onClick={() => setIsLogoutVisible(prevState => !prevState)}
-				className="flex items-center justify-center  rounded-lg bg-blue-600 px-3 py-1 text-base font-semibold text-gray-200"
+				className={`flex items-center justify-center rounded-lg  bg-gray-200 px-3 py-2 text-base font-semibold  text-gray-700 transition-all dark:bg-gray-600 dark:text-gray-100`}
 			>
 				{auth.currentUser.displayName.split(" ")[0]}
 			</button>
 			{isLogoutVisible && (
 				<button
 					onClick={signOutHandler}
-					className="absolute top-9 left-[50%] w-full -translate-x-[50%] rounded-lg  bg-gray-200 px-3 py-1 text-gray-700 shadow-lg transition-all"
+					className="absolute top-12 left-[50%] w-full -translate-x-[50%] rounded-lg bg-red-600 px-3 py-2 text-sm  font-medium text-gray-100 shadow-lg transition-all"
 				>
 					Logout
 				</button>
