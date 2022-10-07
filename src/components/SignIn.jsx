@@ -12,7 +12,7 @@ const SignIn = () => {
 			<div className="">
 				<img src="/google-icon.png" alt="" className="h-8 w-8  " />
 			</div>
-			<span className="-mt-1 text-sm font-semibold">Sign in with Google</span>
+			<span className=" text-sm font-semibold">Sign in with Google</span>
 		</button>
 	);
 };
