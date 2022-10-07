@@ -1,15 +1,23 @@
 import React from "react";
-import { BsFillChatSquareTextFill } from "react-icons/bs";
+import { FaMoon } from "react-icons/fa";
+import { BsSun } from "react-icons/bs";
 import { auth } from "../firebase";
 import SignIn from "./SignIn";
 import SignOut from "./SignOut";
 
-const Navbar = () => {
+const Navbar = ({ onThemeToggle, isDarkMode }) => {
 	return (
-		<nav className="flex h-[60px] items-center justify-between px-4 ">
-			<div>
-				<BsFillChatSquareTextFill className="text-3xl text-teal-700" />
-			</div>
+		<nav className="flex h-[72px] items-center justify-between px-4 ">
+			<button
+				onClick={onThemeToggle}
+				className="rounded-full bg-yellow-200 p-3 transition-all duration-500 dark:bg-gray-200"
+			>
+				{isDarkMode ? (
+					<FaMoon className="text-2xl text-gray-700" />
+				) : (
+					<BsSun className="text-2xl text-yellow-700" />
+				)}
+			</button>
 			{auth.currentUser ? <SignOut /> : <SignIn />}
 		</nav>
 	);

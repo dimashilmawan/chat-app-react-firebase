@@ -1,33 +1,16 @@
 import React, { useRef } from "react";
 import { auth } from "../firebase";
 
-const messageClasses = {
-	sender: `ml-auto `,
-	recipient: `mr-auto `,
-};
-
-const nameClasses = {
-	sender: `text-right`,
-	recipient: `text-left`,
-};
-
-const textClasses = {
-	sender: `rounded-lg rounded-tr-none bg-teal-700 `,
-	recipient: `rounded-lg rounded-tl-none bg-teal-400 text-gray-700 `,
-};
-
 const ChatMessage = ({ message: { displayName, photoURL, text, uid } }) => {
 	const isLogin = auth.currentUser.uid === uid;
 	return (
 		<div
-			className={`flex max-w-max space-x-2  ${
-				isLogin ? messageClasses.sender : messageClasses.recipient
-			}`}
+			className={`flex max-w-max space-x-2  ${isLogin ? "ml-auto" : "mr-auto"}`}
 		>
 			{!isLogin && (
 				<div className="flex items-start">
 					<img
-						className="w-h-10 h-10 rounded-full"
+						className="h-10 w-10 rounded-full"
 						src={photoURL}
 						referrerPolicy="no-referrer"
 						alt={`${displayName}'s profile`}
@@ -40,13 +23,15 @@ const ChatMessage = ({ message: { displayName, photoURL, text, uid } }) => {
 				} `}
 			>
 				<h4
-					className={`text-sm font-semibold  ${
-						isLogin ? nameClasses.sender : nameClasses.recipient
+					className={`text-base font-semibold text-gray-800 dark:text-gray-200  ${
+						isLogin ? "text-right" : "text-left"
 					}`}
-				>{`${isLogin ? "You" : displayName}`}</h4>
+				>{`${isLogin ? "You" : displayName.split(" ")[0]}`}</h4>
 				<p
-					className={`break-all p-1  px-3 pb-[6px] text-sm leading-tight text-gray-100 ${
-						isLogin ? textClasses.sender : textClasses.recipient
+					className={`break-all p-1  px-3 pb-[6px] text-base leading-tight ${
+						isLogin
+							? "rounded-lg rounded-tr-none bg-blue-500/95 text-gray-50"
+							: "rounded-lg rounded-tl-none bg-gray-100 text-gray-800 dark:bg-gray-500 dark:text-gray-200 "
 					}`}
 				>
 					{text}

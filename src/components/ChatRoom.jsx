@@ -1,4 +1,5 @@
 import React from "react";
+import { Comment } from "react-loader-spinner";
 import { collection, orderBy, query } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
@@ -13,7 +14,21 @@ const ChatRoom = () => {
 
 	if (error) return <p>error</p>;
 
-	if (loading) return <div className="flex-1 space-y-2 px-4">... Loading</div>;
+	if (loading)
+		return (
+			<div className="flex flex-1 items-center justify-center space-y-2 px-4 ">
+				<Comment
+					visible={true}
+					height="80"
+					width="80"
+					ariaLabel="comment-loading"
+					wrapperStyle={{}}
+					wrapperClass="comment-wrapper"
+					color="#f3f4f6"
+					backgroundColor="#3b82f6"
+				/>
+			</div>
+		);
 
 	const messages = value.docs.map(doc => {
 		return { ...doc.data(), id: doc.id };
