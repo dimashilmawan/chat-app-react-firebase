@@ -31,8 +31,8 @@ const SignOut = () => {
 				onClick={signOutHandler}
 				className={`absolute top-12 left-[50%] w-full -translate-x-[50%] rounded-lg bg-red-600 px-3 text-sm  font-medium text-gray-100 shadow-lg transition-all focus:outline-none focus:ring dark:focus:ring-gray-300 ${
 					isOpen
-						? "pointer-events-auto h-8 opacity-100"
-						: "pointer-events-none h-0 opacity-0"
+						? "pointer-events-auto visible h-8 opacity-100"
+						: "pointer-events-none invisible h-0 opacity-0"
 				}`}
 			>
 				Logout
