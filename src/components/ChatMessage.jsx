@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { auth } from "../firebase";
 
 const ChatMessage = ({ message: { displayName, photoURL, text, uid } }) => {

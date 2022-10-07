@@ -5,10 +5,10 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 import { auth } from "../firebase";
 
-const SendMessage = () => {
+const SendMessage = ({ scroll }) => {
 	const { displayName, uid, photoURL } = auth.currentUser;
-	console.log(auth.currentUser);
 	const inputTextRef = useRef();
+
 	const submitHandler = async e => {
 		e.preventDefault();
 		const inputText = inputTextRef.current.value;
@@ -24,9 +24,12 @@ const SendMessage = () => {
 			uid,
 			photoURL,
 		});
+
+		scroll.current.scrollIntoView({ behavior: "smooth" });
 	};
+
 	return (
-		<form className="flex space-x-2  p-4" onSubmit={submitHandler}>
+		<form className="flex space-x-2  p-4 pt-0" onSubmit={submitHandler}>
 			<input
 				className=" flex-1 rounded-lg bg-gray-50 p-3 pl-3 text-lg font-medium text-gray-700 transition-all focus:outline-none dark:bg-gray-600 dark:text-gray-200 dark:placeholder:text-gray-300"
 				ref={inputTextRef}

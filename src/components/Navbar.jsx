@@ -1,6 +1,5 @@
 import React from "react";
-import { FaMoon } from "react-icons/fa";
-import { BsSun } from "react-icons/bs";
+import { BsSun, BsFillMoonStarsFill } from "react-icons/bs";
 import { auth } from "../firebase";
 import SignIn from "./SignIn";
 import SignOut from "./SignOut";
@@ -13,7 +12,7 @@ const Navbar = ({ onThemeToggle, isDarkMode }) => {
 				className="rounded-full bg-yellow-200 p-3 transition-all duration-500 dark:bg-gray-200"
 			>
 				{isDarkMode ? (
-					<FaMoon className="text-2xl text-gray-700" />
+					<BsFillMoonStarsFill className="text-2xl text-gray-700" />
 				) : (
 					<BsSun className="text-2xl text-yellow-700" />
 				)}

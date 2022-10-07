@@ -4,7 +4,8 @@ import { collection, orderBy, query } from "firebase/firestore";
 import { useCollection } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
 import ChatMessage from "./ChatMessage";
-const ChatRoom = () => {
+
+const ChatRoom = React.forwardRef((props, ref) => {
 	const [value, loading, error] = useCollection(
 		query(collection(db, "messages"), orderBy("timestamp")),
 		{
@@ -39,8 +40,9 @@ const ChatRoom = () => {
 			{messages.map(message => {
 				return <ChatMessage key={message.id} message={message} />;
 			})}
+			<span ref={ref} />
 		</div>
 	);
-};
+});
 
 export default ChatRoom;
