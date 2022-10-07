@@ -6,10 +6,10 @@ import SignOut from "./SignOut";
 
 const Navbar = ({ onThemeToggle, isDarkMode }) => {
 	return (
-		<nav className="flex h-[72px] items-center justify-between px-4 ">
+		<nav className="flex h-[76px] items-center justify-between px-4 ">
 			<button
 				onClick={onThemeToggle}
-				className="rounded-full bg-yellow-200 p-3 transition-all duration-500 dark:bg-gray-200"
+				className="rounded-full bg-yellow-200 p-3 transition-all  hover:scale-105 focus:outline-none focus:ring-4 focus:ring-gray-50 active:scale-95 dark:bg-gray-200 dark:focus:ring-gray-500"
 			>
 				{isDarkMode ? (
 					<BsFillMoonStarsFill className="text-2xl text-gray-700" />

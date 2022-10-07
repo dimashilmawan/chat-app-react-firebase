@@ -12,9 +12,9 @@ function App() {
 	};
 	return (
 		!loading && (
-			<div className={isDarkMode ? " dark" : ""}>
-				<div className="flex h-screen flex-col bg-gray-300 transition-all dark:bg-gray-800/95 ">
-					<header className="bg-gray-400/20 dark:bg-gray-800">
+			<div className={isDarkMode ? " dark bg-gray-300" : "bg-gray-100"}>
+				<div className="mx-auto flex h-screen flex-col bg-gray-300 transition-all dark:bg-gray-800/95 sm:max-w-2xl  md:max-w-3xl">
+					<header className="shadow-md dark:shadow-gray-700">
 						<Navbar
 							onThemeToggle={themeToggleHandler}
 							isDarkMode={isDarkMode}
