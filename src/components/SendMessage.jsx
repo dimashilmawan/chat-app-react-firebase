@@ -37,7 +37,7 @@ const SendMessage = ({ scroll }) => {
 				placeholder="Type here..."
 			/>
 			<button
-				className="rounded-lg bg-blue-600 px-3 text-gray-100 focus:border-none focus:outline-none focus:ring"
+				className="rounded-lg bg-blue-600 px-3 text-gray-100 focus:border-none focus:outline-none focus:ring-2 focus:ring-blue-400"
 				type="submit"
 			>
 				<IoSend className="text-xl" />
