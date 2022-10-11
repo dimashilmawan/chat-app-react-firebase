@@ -1,6 +1,6 @@
 # DEMO
 
-site: https://chat-room-react-netlify-dh.netlify.app
+site: https://chat-room-react-firebase-dh.netlify.app/
 
 # Getting Started with Create React App
 
